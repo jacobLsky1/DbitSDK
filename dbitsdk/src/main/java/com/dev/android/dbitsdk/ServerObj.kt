@@ -9,7 +9,7 @@ import retrofit2.Response
 class ServerObj() {
     companion object{
 
-        private fun checkServer(userAgent: String,serverCallback: ServerCheckCallback){
+        fun checkServer(userAgent: String,serverCallback: ServerCheckCallback){
             MainRetrofitInstance.userAgent = userAgent
             val callback = MainRetrofitInstance.api.serverStatus()
 
