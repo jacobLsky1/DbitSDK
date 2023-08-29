@@ -6,9 +6,6 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class ServerObj() {
-    companion object{
-
         fun checkServer(userAgent: String,serverCallback: ServerCheckCallback){
             MainRetrofitInstance.userAgent = userAgent
             val callback = MainRetrofitInstance.api.serverStatus()
@@ -32,11 +29,8 @@ class ServerObj() {
                     }
                 }
 
-
                 override fun onFailure(call: Call<ServerStatus>, t: Throwable) {
                     serverCallback.onResult(true)
                 }
             })
         }
-    }
-}
