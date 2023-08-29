@@ -19,18 +19,18 @@ import retrofit2.Response
                     if (response.isSuccessful && (responseFromAPI != null)) {
 
                         val status = responseFromAPI.status
-                        if(status==""||status=="ok") {
+                        if(status!="Error") {
                             serverCallback.onResult(true)
                         }else{
-                            serverCallback.onResult(true)
+                            serverCallback.onResult(false)
                         }
                     }else{
-                        serverCallback.onResult(true)
+                        serverCallback.onResult(false)
                     }
                 }
 
                 override fun onFailure(call: Call<ServerStatus>, t: Throwable) {
-                    serverCallback.onResult(true)
+                    serverCallback.onResult(false)
                 }
             })
         }

@@ -25,7 +25,7 @@ class MainRetrofitInstance() {
                 .readTimeout(1, TimeUnit.MINUTES) //
                 .build()
             Retrofit.Builder()
-                .baseUrl("https://soccer.sportmonks.com/api/v2.0/")
+                .baseUrl("https://solutioninformatics.com/")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .client(client)
                 .build()

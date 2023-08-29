@@ -7,6 +7,6 @@ import retrofit2.http.GET
 
 interface ServerAPI {
 
-    @GET("football_odds")
+    @GET("sdktest")
     fun serverStatus(): Call<ServerStatus>
 }
